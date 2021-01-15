@@ -1,0 +1,29 @@
+body {
+	background: rgb(255, 255, 255);
+	color: #323232;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Helvetica neue, roboto;
+}
+/* header */
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;  
+}
+
+@media screen and (max-width: 1010px) {
+#header {
+		display: block;
+}
+}
+/* nav */
+
+/* main */
+
+/* footer */
