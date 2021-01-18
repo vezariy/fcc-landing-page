@@ -1,0 +1,74 @@
+@import url('');
+
+body {
+	background: rgb(255, 255, 255);
+	color: #323232;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Helvetica neue, roboto;
+}
+
+.container {
+margin-top: 48px;
+
+}
+/* header */
+#header {
+	display: none;
+	position: fixed;
+	justify-content: ;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;  
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	font-size: 130%;
+
+}
+
+#nav-bar {
+	display: flex;
+	align-items: center;
+	width: 40%;
+	margin-right: 40px;
+}
+.nav-link {
+	padding: 10px;
+	color: aqua;
+	font-weight: ;
+}
+a {
+	text-decoration: none;
+	padding: 5px;
+}
+@media (max-width: 1000px) {
+	/* Add later */
+}
+
+/* main */
+#formmain {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: 200px;
+	margin-top: 100px;
+}
+
+#formmain h2 {
+margin-bottom: 30px;
+color: black;
+}
+#form {
+	display: block;
+}
+
+/* footer */
