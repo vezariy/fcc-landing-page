@@ -1,4 +1,4 @@
-@import url('');
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@200&display=swap');
 
 body {
 	background: rgb(255, 255, 255);
@@ -8,7 +8,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: Helvetica neue, roboto;
+	font-family: 'Imbue', serif;
 }
 
 .container {
