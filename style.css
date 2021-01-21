@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Imbue:wght@200&display=swap');
 
 body {
-	background: rgb(255, 255, 255);
+	background:white;
 	color: #323232;
 	margin: 0;
 	height: 100vh;
@@ -13,13 +13,14 @@ body {
 
 .container {
 margin-top: 48px;
-
+background-color: blueviolet;
 }
 /* header */
 #header {
-	display: none;
+	background-color: red;
+	display: flex;
 	position: fixed;
-	justify-content: ;
+	justify-content: center;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -30,10 +31,11 @@ margin-top: 48px;
 	display: flex;
 	align-items: center;
 	font-size: 130%;
-
 }
 
 #nav-bar {
+	background-color: green;
+	border-radius: 2px solid;
 	display: flex;
 	align-items: center;
 	width: 40%;
@@ -53,7 +55,10 @@ a {
 }
 
 /* main */
+
+
 #formmain {
+	background-color: blue;
 	text-align: center;
 	display: flex;
 	justify-content: center;
