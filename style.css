@@ -44,7 +44,6 @@ background-color: blueviolet;
 .nav-link {
 	padding: 10px;
 	color: aqua;
-	font-weight: ;
 }
 a {
 	text-decoration: none;
@@ -57,7 +56,7 @@ a {
 /* main */
 
 
-#formmain {
+#form-main {
 	background-color: blue;
 	text-align: center;
 	display: flex;
@@ -65,10 +64,10 @@ a {
 	flex-direction: column;
 	align-items: center;
 	height: 200px;
-	margin-top: 100px;
+	margin: 80px 0px 0px;
 }
 
-#formmain h2 {
+#form-main h2 {
 margin-bottom: 30px;
 color: black;
 }
