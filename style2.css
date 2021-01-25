@@ -15,10 +15,10 @@ body {
 
 .container { 
     background-color: blueviolet;
-text-align: center;    
+    text-align: center;    
 }
 
-/* header */
+/* HEADER */
 
 #header {
     display: flex;
@@ -31,25 +31,39 @@ text-align: center;
     height: 100px;  
     background-color: white;
     }
+    @media (max-width: 600px) {    
+        header {
+            flex-direction: ;
+            flex-wrap: wrap;
+            }
+    }
+
 .logo {
     border: 5px solid black;
     margin: 0;
     padding: 5px;
-    margin-left: -60px
+    width: 60vw;
+    font-size: 150%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#header-img {
+    width: 20px;
+    height: auto;
 }
 .nav-list {
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: space-around;
+    width: 40vw;
 }
 #nav-bar {
     padding: 5px;
-    border: 5px solid black;
+    border: 5px solid rgb(165, 155, 9);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 50%;
     flex-direction: row;
     }    
 
@@ -57,8 +71,13 @@ text-align: center;
  /* VIDEO */ 
 #video { 
 display: flex;
-
 }
+#video-short {
+    display: block;
+    border: 5px solid black;
+    padding: 5px;
+}
+/* Main */
 
 #form-main {
         background-color: blue;
@@ -70,16 +89,40 @@ display: flex;
         height: 220px;
         margin: 90px 0px 0px;
         padding: 20x;
-        border: 2px solid red;
+        border: 5px solid red;
     }
 
-section > h2 {
+#form-main > h2 {
         margin-bottom: 30px;
-        color: red;
+        color: rgb(0, 0, 0);
+        margin-bottom: 15px 0;
         }
-
-/*Footer */     
-
-.footer {
+#features {
     display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: flex-end;
+    border: 5px solid red;
+    padding: 10px 20px;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 5px solid black;
+}
+/*Footer */     
+#footer-end {
+    border: 5px solid green;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 70%;
+}
+.footer {
+    /* display: flex; */
 }
