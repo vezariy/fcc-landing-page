@@ -1,22 +1,33 @@
 :root {
---main:  rgba(4, 78, 33, 0.836);
---secondary: rgba(1, 201, 90, 0.788);
+--main:  rgba(15, 110, 53, 0.836);
+--secondary: rgba(1, 201, 90, 0.9);
 --button: rgb(21, 201, 90);
 --button-hover: rgb(11, 156, 67);
+--bg-cl: rgb(186, 224, 191);
 }
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: 'Imbue', serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.5em;
     width: 100%;
-    background-color: white;
+    background-color: var(--bg-cl);
     box-sizing: border-box;
+    min-width: 400px;
 }
 .container { 
     text-align: center;    
+}
+a{ 
+    text-decoration: none;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;  
 }
 
 /* HEADER */
@@ -24,19 +35,21 @@ body {
 #header {
     display: flex;
     position: fixed;
+    flex-wrap: wrap;
     justify-content: space-between;
     top: 0;
     left: 0;
     right: 0;
     height: auto;  
-    background: linear-gradient(to bottom, rgba(4, 78, 33, 0.836) 0%, rgba(1, 201, 90, 0.788) 100%);
-    z-index: 1;
-    height: 10%;
+    background: var(--main);
+    color: black;
+    border: 5px solid black;
     }
 
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 150%;
     font-weight: bold;
     padding: 5px;
@@ -46,15 +59,14 @@ body {
     width: 40px;
     height: auto;
 }
-
-/* Need to modify this, get rid of nav list, include it's styles to nav-bar*/
 #nav-bar {
     padding: 5px;
-    border: 5px solid black;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     flex-direction: row;
     font-size: 25px;
+    color: var(--main);
     }    
 .nav-list {
     display: flex;
@@ -63,17 +75,18 @@ body {
     justify-content: space-around;
     width: 50vw;
 }
-
+.nav-link {
+    font-weight: bold;
+}
 @media (max-width: 800px) {    
         #header {
             flex-wrap: wrap;
-            justify-content: flex-end;
             width: 100%;
-            background-color: red;
             } 
         .logo {
             text-align: center;
             margin: auto;
+            padding: 0;
             }
         
         #nav-bar {
@@ -92,12 +105,12 @@ body {
             margin-top: 0;
         }
     }
+
+
 /* Main */
 .image-bg {
-    background: url("images/fon2.jpg") round;
+    background: url("images/fon4.jpg") round;
     height: 90vh;
-   /* margin: 100px; */
-   border: 100px solid var(--main);
 }
 #form {
     display: flex;
@@ -120,61 +133,62 @@ body {
 
 #form > h2 {
         margin-bottom: 15px;
-        color: var(--main);
+        color: var(--black);
         font-weight: bold;
         } 
 #email {
-width: 250px;
-height: 25px;
-border: 2px solid var(--main);
+    width: 250px;
+    height: 30px;
+    border: 2px solid var(--main);
+    padding: 5px;
 }
 #submit {
-max-width: 100px;
-width: 100%;
-height: 30px;
-background-color: var(--button);
-
-color: white;
-cursor: pointer;
-text-transform: uppercase;
-font-weight: 800;
-font-size: 0.8em;
+    max-width: 100px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--button);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.8em;
 }
 #submit:hover {
     background-color: var(--button-hover);
     transition: background-color 1s;
 }
 
-        /* VIDEO */ 
+    /* VIDEO */ 
 
 #video-short {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-    margin-top: 40px;
+    justify-content: center;
+    padding: 30px;
+    width: auto;
     }
-iframe {
-    border: var(--secondary) dashed 5px;
+#video-short>iframe {
+    max-width: 500px;
+    width: 100%;
 }
-.video-par {
-font-size: 150%;
-margin-bottom: 10px;
-color: white;
+@media (max-width: 400px) {
+#video-short>iframe {
+    width: auto;
+    height: auto;
+    margin: 50px;
+} 
 }
 #features {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-content: center;
-    /* border: 5px solid red; */
-    padding: 10px 20px;
-    background-color: rgba(26, 158, 14, 0.788);
+    padding: 20px 100px;
+    background-color: var(--bg-cl);
+    border: 5px double black;
 }
 .description {
 display: flex;
 justify-content: center;
-/* width: 80%; */
 text-align: center;
 }
 .description p {
@@ -183,13 +197,13 @@ text-align: center;
 }
 .description img {
     width: 50px;
-    margin-left: 25px;
-    height: 35px;
+    margin-left: 20px;
+    height: 40px;
     align-self: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 10px;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .description {
         justify-content: center;
         width: 100%;
@@ -198,7 +212,7 @@ text-align: center;
     }
     .description img {
         padding: 5px;
-		margin-left: 10px;
+		margin-left: -10px;
 		width: 100%;
 		align-self: auto;
 		margin-top: 15px;
@@ -209,15 +223,18 @@ text-align: center;
 #boxes {
     height: auto;
     margin-top: 40px;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 5px solid black;
+    border: 5px double black;
+    background-color: var(--bg-cl);
 }
 
 #boxes #first, #boxes #second, #boxes #third {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
     width: calc(100/3);
@@ -227,7 +244,10 @@ text-align: center;
     padding: 15px;
     margin: 15px;
     box-shadow: 3px 3px 3px 5px;
-    /* list-style: none; */
+    background-color: whitesmoke;
+    min-width: 200px;
+    min-height: 330px;
+
 }
 
 .box-head {
@@ -235,11 +255,13 @@ text-align: center;
     width: 100%;
     text-transform: uppercase;
     font-weight: 600;
-    background-color: var(--secondary);
+    background-color: var(--button);
+    border-radius:  5px;
+    color: white;
 }
 
 #boxes #first h2, #boxes #second h2, #boxes #third h2 {
-margin-top: 15px;
+margin-top: 20px;
 }
 #boxes #first ul, #boxes #second ul, #boxes #third ul {
     margin: 10px 0;
@@ -254,25 +276,27 @@ margin-top: 15px;
     max-width: 100px;
     width: 100%;
     height: 30px;
-    background-color: rgb(21, 201, 90);
+    background-color: var(--button);
     color: white;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1em;
+    margin-top: 20px;
 }
 .button:hover {
-    background-color: rgb(11, 156, 67);
+    background-color: var(--button-hover);
     transition: background-color 1s;
     }
+
 /*Footer */     
 #footer {
     margin-top: 25px;
     padding: 10px;
     display: block;
     width: auto;
-   background: linear-gradient(to bottom, rgba(4, 78, 33, 0.836) 0%, rgba(1, 201, 90, 0.788) 100%);
-    border-radius: 5px;
+    background-color:var(--main);
+
 }
 footer ul {
     margin-top: 10px;
@@ -286,16 +310,20 @@ footer span {
     margin-right: 10px;
     display: flex;
     justify-content: flex-end;
-    color: rgb(68, 65, 65);
+    color: white;
 }
 .footer-ul {
     list-style: none;
 }
 
-a{ 
-text-decoration: none;
-padding: 10px;
-text-decoration: none;
-color: black;
-font-weight: bold;
+@media (max-width: 800px) {
+#footer {
+    text-align: center;
+}
+footer ul {
+justify-content: center;
+}
+footer span {
+justify-content: center;
+}
 }
